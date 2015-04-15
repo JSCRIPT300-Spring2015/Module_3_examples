@@ -1,0 +1,23 @@
+{
+  "name": "MyApp",
+  "version": "1.0.0",
+  "description": "My Amazing Application",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JSCRIPT300-Spring2015/Module_3_examples.git"
+  },
+  "author": "James Donaldson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSCRIPT300-Spring2015/Module_3_examples/issues"
+  },
+  "homepage": "https://github.com/JSCRIPT300-Spring2015/Module_3_examples"
+}

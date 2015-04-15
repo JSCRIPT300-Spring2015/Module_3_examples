@@ -1,0 +1,1 @@
+require('./custom_messenger_alt').messenger('Hello, class!');
