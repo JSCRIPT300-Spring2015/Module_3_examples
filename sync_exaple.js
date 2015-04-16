@@ -1,17 +1,18 @@
 var fs = require('fs');
-
-var startTime = 0;
-var finishTime = 0;
-
-startTime = Date.now();
-function readFile(filename) {
+var elapsedTime = 0;
+var t1 = Date.now();
+var t2;
+//simulating two long-running synchronous file I/O operations
+function readFiles() {
 	setTimeout(function () {
-		var fileContents = fs.readFileSync(filename, 'utf8');
+		fileContents = fs.readFileSync('Taiko.txt', 'utf8');
 		console.log(fileContents);
+		setTimeout(function () {
+			fileContents = fs.readFileSync('Gunter_Grass.txt', 'utf8');
+			console.log(fileContents);
+			t2 = Date.now();
+			console.log((t2 - t1) + ' milliseconds elapsed');
+		}, 5000);
 	}, 5000);
 }
-readFile('Taiko.txt');
-readFile('Gunter_Grass.txt')
-finishTime = Date.now();
-
-console.log((finishTime - startTime) + ' milliseconds passed');
+readFiles();

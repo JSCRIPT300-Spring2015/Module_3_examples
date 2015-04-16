@@ -12,8 +12,8 @@ emitter.on('customEvent', function (message) {
 });
 
 emitter.on('anotherCustomEvent', function (message) {
-	console.log('anotherCustomEvent emitted');
+	console.log(message);
 });
 
 emitter.emit('customEvent', 'Hello, class!');
-emitter.emit('events are nifty!');
+emitter.emit('anotherCustomEvent', 'Hey there');
